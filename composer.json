@@ -36,5 +36,11 @@
         "hasCpSection": false,
         "changelogUrl": "???",
         "class": "furbo\\furborenderer\\FurboRenderer"
-    }
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "/Users/tonioseiler/Documents/workspace/furbo-renderer/furbo-render"
+        }
+    ]
 }

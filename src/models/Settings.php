@@ -28,7 +28,13 @@ class Settings extends Model
     /**
      * @var string
      */
-    public $someAttribute = 'Some Default';
+    public $apiKey = '';
+
+
+    /**
+     * @var string
+     */
+    public $apiUrl = 'https://render.furbo.ch/api/v1.0/';
 
     // Public Methods
     // =========================================================================
@@ -39,8 +45,8 @@ class Settings extends Model
     public function rules()
     {
         return [
-            ['someAttribute', 'string'],
-            ['someAttribute', 'default', 'value' => 'Some Default'],
+            ['apiKey', 'string'],
+            ['apiUrl', 'string']
         ];
     }
 }
