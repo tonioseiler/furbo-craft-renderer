@@ -1,0 +1,40 @@
+{
+    "name": "furbo/furbo-renderer",
+    "description": "Prerenders pages / entries",
+    "type": "craft-plugin",
+    "version": "1.0.0",
+    "keywords": [
+        "craft",
+        "cms",
+        "craftcms",
+        "craft-plugin",
+        "furbo renderer"
+    ],
+    "support": {
+        "docs": "???",
+        "issues": "???"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Tonio Seiler",
+            "homepage": "https://furbo.ch/tonio-seiler-dipl-ing-fh-informatik"
+        }
+    ],
+    "require": {
+        "craftcms/cms": "^3.0.0-RC1"
+    },
+    "autoload": {
+        "psr-4": {
+          "furbo\\furborenderer\\": "src/"
+        }
+    },
+    "extra": {
+        "name": "Furbo Renderer",
+        "handle": "furbo-renderer",
+        "hasCpSettings": true,
+        "hasCpSection": false,
+        "changelogUrl": "???",
+        "class": "furbo\\furborenderer\\FurboRenderer"
+    }
+}

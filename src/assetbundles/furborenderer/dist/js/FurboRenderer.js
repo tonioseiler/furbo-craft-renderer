@@ -1,0 +1,11 @@
+/**
+ * Furbo Renderer plugin for Craft CMS
+ *
+ * Furbo Renderer JS
+ *
+ * @author    Tonio Seiler
+ * @copyright Copyright (c) 2019 Tonio Seiler
+ * @link      https://furbo.ch/tonio-seiler-dipl-ing-fh-informatik
+ * @package   FurboRenderer
+ * @since     1.0.0
+ */
