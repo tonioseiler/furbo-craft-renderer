@@ -87,17 +87,23 @@ class FurboRenderer extends Plugin
                 $request = Craft::$app->request;
                 if ($request->isSiteRequest && $request->isGet && !$request->isAjax) {
                     $userAgent = $request->getUserAgent();
-                    if (preg_match('/bot|crawl|curl|dataprovider|search|get|spider|find|java|majesticsEO|google|yahoo|teoma|contaxe|yandex|libwww-perl|facebookexternalhit/i', $userAgent)) {
-                        // is bot
-                        $url = $request->absoluteUrl;
-                        $renderer = new HtmlRenderer();
-                        $apiKey = $this->getSettings()->apiKey;
-                        $renderer->setApiKey($apiKey);
-                        $html = $renderer->render($url);
+                    // is bot
+                    //if (preg_match('/bot|crawl|curl|dataprovider|search|get|spider|find|java|majesticsEO|google|yahoo|teoma|contaxe|yandex|libwww-perl|facebookexternalhit/i', $userAgent)) {
+                        $cacheKey = 'furbo.furborenderer.'.$request->absoluteUrl;
+                        $html = Craft::$app->cache->get($cacheKey);
+
+                        if ($html === false && !empty($this->getSettings()->cacheExpiry)) {
+                            $url = $request->absoluteUrl;
+                            $renderer = new HtmlRenderer();
+                            $apiKey = $this->getSettings()->apiKey;
+                            $renderer->setApiKey($apiKey);
+                            $html = $renderer->render($url);
+                            Craft::$app->cache->set($cacheKey, $html, $this->getSettings()->cacheExpiry);
+                        }
 
                         echo $html;
                         exit(-1);
-                    }
+                    //}
                 }
             }
         );

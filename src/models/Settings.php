@@ -36,6 +36,11 @@ class Settings extends Model
      */
     public $apiUrl = 'https://render.furbo.ch/api/v1.0/';
 
+    /**
+     * @var int
+     */
+    public $cacheExpiry = 86400;
+
 
     // Public Methods
     // =========================================================================
@@ -47,7 +52,8 @@ class Settings extends Model
     {
         return [
             ['apiKey', 'string'],
-            ['apiUrl', 'string']
+            ['apiUrl', 'string'],
+            ['cacheExpiry', 'number']
         ];
     }
 }

@@ -34,3 +34,11 @@
     name: 'apiUrl',
     value: settings['apiUrl']})
 }}
+
+{{ forms.textField({
+    label: 'Cache expiry',
+    instructions: 'How long the prerendered result will be cached.',
+    id: 'cacheExpiry',
+    name: 'cacheExpiry',
+    value: settings['cacheExpiry']})
+}}
