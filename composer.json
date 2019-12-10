@@ -1,5 +1,5 @@
 {
-    "name": "furbo/furbo-renderer",
+    "name": "furbo/craft-renderer",
     "description": "Prerenders pages / entries",
     "type": "craft-plugin",
     "version": "1.0.0",
@@ -10,10 +10,7 @@
         "craft-plugin",
         "furbo renderer"
     ],
-    "support": {
-        "docs": "???",
-        "issues": "???"
-    },
+    "support": {},
     "license": "MIT",
     "authors": [
         {
@@ -22,7 +19,8 @@
         }
     ],
     "require": {
-        "craftcms/cms": "^3.0.0-RC1"
+        "craftcms/cms": "^3.0.0-RC1",
+        "furbo/renderer": "1.0.0"
     },
     "autoload": {
         "psr-4": {
@@ -40,7 +38,7 @@
     "repositories": [
         {
             "type": "path",
-            "url": "/Users/tonioseiler/Documents/workspace/furbo-renderer/furbo-render"
+            "url": "/Users/tonioseiler/Documents/workspace/furbo-renderer/furbo-render-client"
         }
     ]
 }

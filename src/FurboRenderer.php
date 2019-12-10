@@ -86,15 +86,19 @@ class FurboRenderer extends Plugin
             function (TemplateEvent $event) {
                 $request = Craft::$app->request;
                 if ($request->isSiteRequest && $request->isGet && !$request->isAjax) {
-                    $url = $request->absoluteUrl;
-                    $renderer = new HtmlRenderer();
-                    $renderer->setApiKey('02546635-088c-4132-9d07-59a05f7a371c');
-                    $html = $renderer->render($url);
-                    echo $html;
-                    exit(-1);
+                    $userAgent = $request->getUserAgent();
+                    if (preg_match('/bot|crawl|curl|dataprovider|search|get|spider|find|java|majesticsEO|google|yahoo|teoma|contaxe|yandex|libwww-perl|facebookexternalhit/i', $userAgent)) {
+                        // is bot
+                        $url = $request->absoluteUrl;
+                        $renderer = new HtmlRenderer();
+                        $apiKey = $this->getSettings()->apiKey;
+                        $renderer->setApiKey($apiKey);
+                        $html = $renderer->render($url);
+
+                        echo $html;
+                        exit(-1);
+                    }
                 }
-
-
             }
         );
     }

@@ -36,6 +36,7 @@ class Settings extends Model
      */
     public $apiUrl = 'https://render.furbo.ch/api/v1.0/';
 
+
     // Public Methods
     // =========================================================================
 
