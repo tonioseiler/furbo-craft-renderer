@@ -38,7 +38,7 @@
     "repositories": [
         {
             "type": "path",
-            "url": "/Users/tonioseiler/Documents/workspace/furbo-renderer/furbo-render-client"
+            "url": "../furbo-renderer/furbo-render-client"
         }
     ]
 }
