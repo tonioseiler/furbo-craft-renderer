@@ -88,7 +88,7 @@ class FurboRenderer extends Plugin
                 if ($request->isSiteRequest && $request->isGet && !$request->isAjax) {
                     $userAgent = $request->getUserAgent();
                     // is bot
-                    //if (preg_match('/bot|crawl|curl|dataprovider|search|get|spider|find|java|majesticsEO|google|yahoo|teoma|contaxe|yandex|libwww-perl|facebookexternalhit/i', $userAgent)) {
+                    if (preg_match('/bot|crawl|curl|dataprovider|search|get|spider|find|java|majesticsEO|google|yahoo|teoma|contaxe|yandex|libwww-perl|facebookexternalhit/i', $userAgent)) {
                         $cacheKey = 'furbo.furborenderer.'.$request->absoluteUrl;
                         $html = Craft::$app->cache->get($cacheKey);
 
@@ -103,7 +103,7 @@ class FurboRenderer extends Plugin
 
                         echo $html;
                         exit(-1);
-                    //}
+                    }
                 }
             }
         );
