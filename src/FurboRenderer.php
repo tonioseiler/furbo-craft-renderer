@@ -92,6 +92,8 @@ class FurboRenderer extends Plugin
                         $cacheKey = 'furbo.furborenderer.'.$request->absoluteUrl;
                         $html = Craft::$app->cache->get($cacheKey);
 
+                        FurboRenderer::log($userAgent.' accessing url: '.$request->absoluteUrl, LogLevel::Info);
+
                         if ($html === false && !empty($this->getSettings()->cacheExpiry)) {
                             $url = $request->absoluteUrl;
                             $renderer = new HtmlRenderer();
@@ -99,6 +101,9 @@ class FurboRenderer extends Plugin
                             $renderer->setApiKey($apiKey);
                             $html = $renderer->render($url);
                             Craft::$app->cache->set($cacheKey, $html, $this->getSettings()->cacheExpiry);
+                            FurboRenderer::log('Furbo Render Portal returned html code.', LogLevel::Info);
+                        } else {
+                            FurboRenderer::log('Loaded from cache.', LogLevel::Info);
                         }
 
                         echo $html;
