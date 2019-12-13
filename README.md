@@ -1,6 +1,6 @@
 # Furbo Renderer plugin for Craft CMS 3.x
 
-Prerenders pages / entries
+Server side rendering of pages / entries.
 
 ![Screenshot](resources/img/plugin-logo.png)
 
@@ -10,34 +10,43 @@ This plugin requires Craft CMS 3.0.0-beta.23 or later.
 
 ## Installation
 
-To install the plugin, follow these instructions.
-
-1. Open your terminal and go to your Craft project:
-
-        cd /path/to/project
-
-2. Then tell Composer to load the plugin:
-
-        composer require /furbo-renderer
-
-3. In the Control Panel, go to Settings → Plugins and click the “Install” button for Furbo Renderer.
+Install over the craft plugin store.
+link einfügen
 
 ## Furbo Renderer Overview
 
--Insert text here-
+Rendered output includes content loaded asynchronously over javascript, regardless of the technology used (like react, vue or similar).
+Ideal to prerender single page applications for good search engine indexing.
+
+###Features
+
+* Accessible over simple REST API
+* PHP Client Library available
+* Free Plugin for Craft CMS available
+* Output formats: HTML, PDF or Image
+
+Registration portal still under development.
+https://render.furbo.ch
+Contact us over email for an API key.
+support@furbo.ch
 
 ## Configuring Furbo Renderer
 
--Insert text here-
+The follwing settings can be done over the Plugins Setting Page:
+
+* API Key
+* API Url
+* Cache expiry
+
 
 ## Using Furbo Renderer
 
--Insert text here-
+Once the plugin is installed, it works in the background and should not be visible on your website.
 
 ## Furbo Renderer Roadmap
 
-Some things to do, and ideas for potential features:
+* Implement configuration of viewport size
+* Implement validation of API key
+* Implement validation of Render Portal
 
-* Release it
-
-Brought to you by [Tonio Seiler](https://furbo.ch/tonio-seiler-dipl-ing-fh-informatik)
+Brought to you by [Furbo](https://furbo.ch/)
