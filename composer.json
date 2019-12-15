@@ -15,7 +15,7 @@
     "authors": [
         {
             "name": "Tonio Seiler",
-            "homepage": "https://furbo.ch/tonio-seiler-dipl-ing-fh-informatik"
+            "homepage": "https://furbo.ch"
         }
     ],
     "require": {
@@ -34,11 +34,5 @@
         "hasCpSection": false,
         "changelogUrl": "???",
         "class": "furbo\\furborenderer\\FurboRenderer"
-    },
-    "repositories": [
-        {
-            "type": "path",
-            "url": "../furbo-renderer/furbo-render-client"
-        }
-    ]
+    }
 }
