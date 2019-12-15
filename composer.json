@@ -1,6 +1,6 @@
 {
     "name": "furbo/craft-renderer",
-    "description": "Prerenders pages / entries",
+    "description": "Prerenders pages / entries on the server side regardless of the client technology used (Vue js, react or similar).",
     "type": "craft-plugin",
     "version": "1.0.0",
     "keywords": [
@@ -28,7 +28,7 @@
         }
     },
     "extra": {
-        "name": "Furbo Renderer",
+        "name": "Furbo Craft Server Side Renderer",
         "handle": "furbo-renderer",
         "hasCpSettings": true,
         "hasCpSection": false,
